@@ -1,5 +1,7 @@
 /* Reset default margin and padding */
-body, h1, p {
+body,
+h1,
+p {
     margin: 0;
     padding: 0;
 }
@@ -18,14 +20,31 @@ header h1 {
 }
 
 /* Style header navigation menu */
+/* Gaya umum untuk menu navigasi */
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
-nav ul li {
+nav li {
+    margin: 0 15px;
+    text-align: center;
     display: inline;
     margin-right: 20px;
 }
+
+/* Gaya untuk layar kecil (misalnya, ponsel) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
 
 nav ul li a {
     text-decoration: none;
@@ -34,14 +53,16 @@ nav ul li a {
 
 /* Style home section */
 #home {
-    background-color: #fff; /* Latar belakang putih */
-    padding: 50px;
+    background-color: #fff;
+    /* Latar belakang putih */
+    padding: 0px 50px 40px 50px;
     text-align: center;
 }
 
 /* Style game images section */
 #games {
-    background-color: black; /* Latar belakang hitam */
+    background-color: black;
+    /* Latar belakang hitam */
     padding: 50px;
     text-align: center;
 }
@@ -61,19 +82,21 @@ nav ul li a {
 .game-image p {
     margin-top: 10px;
     font-weight: bold;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 /* Style about section */
 #about {
-    background-color: #fff; /* Latar belakang putih */
+    background-color: #fff;
+    /* Latar belakang putih */
     padding: 50px;
     text-align: center;
 }
 
 /* Style contact section */
 #contact {
-    background-color: #f2f2f2; /* Latar belakang abu-abu muda */
+    background-color: #f2f2f2;
+    /* Latar belakang abu-abu muda */
     padding: 50px;
     text-align: center;
 }
@@ -85,4 +108,3 @@ footer {
     color: #fff;
     padding: 10px 0;
 }
-
